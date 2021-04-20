@@ -1,4 +1,4 @@
-package com.learn.designpattern.factory.simple;
+package com.learn.designpattern.factory;
 
 /**
  * @Description: 课程接口

@@ -1,11 +1,13 @@
 package com.learn.designpattern.factory.simple;
 
+import com.learn.designpattern.factory.ICourse;
+
 /**
  * @Description: 课程工厂
  * @Author: chenfuyuan
  * @Date: 2021/4/20 19:38
  */
-public class CourseFactory {
+public class CourseSimpleFactory {
 
     /**
      * 获取课程
