@@ -13,12 +13,12 @@ import com.learn.designpattern.factory.abstractfactory.product.MediaWashingMachi
 public class MediaElectricalFactory extends AbstractElectricalFactory{
 
     @Override
-    protected IAirConditioning createAirConditioning() {
+    public IAirConditioning createAirConditioning() {
         return new MediaAirConditioning();
     }
 
     @Override
-    protected IWashingMachine createWashingMachine() {
+    public IWashingMachine createWashingMachine() {
         return new MediaWashingMachine();
     }
 }

@@ -12,12 +12,12 @@ import com.learn.designpattern.factory.abstractfactory.product.IWashingMachine;
  */
 public class GreeElectricalFactory extends AbstractElectricalFactory {
     @Override
-    protected IAirConditioning createAirConditioning() {
+    public IAirConditioning createAirConditioning() {
         return new GreeAirConditioning();
     }
 
     @Override
-    protected IWashingMachine createWashingMachine() {
+    public IWashingMachine createWashingMachine() {
         return new GreeWashingMachine();
     }
 }
