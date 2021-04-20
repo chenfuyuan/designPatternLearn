@@ -1,4 +1,4 @@
-package com.learn.designpattern.factory.abstractfactory;
+package com.learn.designpattern.factory.abstractfactory.factory;
 
 import com.learn.designpattern.factory.abstractfactory.product.GreeAirConditioning;
 import com.learn.designpattern.factory.abstractfactory.product.GreeWashingMachine;

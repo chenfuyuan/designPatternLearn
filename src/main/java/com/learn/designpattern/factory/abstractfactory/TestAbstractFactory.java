@@ -1,5 +1,7 @@
 package com.learn.designpattern.factory.abstractfactory;
 
+import com.learn.designpattern.factory.abstractfactory.factory.MediaElectricalFactory;
+
 /**
  * @Description: 测试抽象工厂
  * @Author: chenfuyuan
