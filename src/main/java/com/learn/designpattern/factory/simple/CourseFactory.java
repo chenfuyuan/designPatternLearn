@@ -13,9 +13,18 @@ public class CourseFactory {
      * @return 对应的课程
      */
     public static ICourse getCourse(Class<? extends ICourse> clazz) {
-        if (clazz != null) {
+        return getCourse(clazz.getName());
+    }
+
+    /**
+     * 获取课程
+     * @param className 课程类名
+     * @return 对应的课程
+     */
+    public static ICourse getCourse(String className) {
+        if (!(null == className || "".equals(className))) {
             try {
-                return clazz.newInstance();
+                return (ICourse)Class.forName(className).newInstance();
             } catch (Exception e) {
                 e.printStackTrace();
             }
