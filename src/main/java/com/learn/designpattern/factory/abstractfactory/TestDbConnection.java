@@ -2,6 +2,8 @@ package com.learn.designpattern.factory.abstractfactory;
 
 import com.learn.designpattern.factory.abstractfactory.factory.DbConnectionPool;
 import com.learn.designpattern.factory.abstractfactory.factory.Pool;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 
 import java.sql.Connection;
 import java.util.Vector;
