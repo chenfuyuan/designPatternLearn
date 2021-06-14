@@ -1,5 +1,8 @@
 package com.learn.designpattern.singleton;
 
+import sun.plugin2.message.Serializer;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +11,7 @@ import java.util.List;
  * @Author: chenfuyuan
  * @Date: 2021/4/23 22:50
  */
-public class LazySimpleSingleton {
+public class LazySimpleSingleton implements Serializable {
 
     /**
      * 单例对象
@@ -51,8 +54,10 @@ public class LazySimpleSingleton {
         t1.start();
         t2.start();
 
+    }
 
-
+    private Object readResolve() {
+        return INSTANCE;
     }
 
     static class ExctorThread implements Runnable {

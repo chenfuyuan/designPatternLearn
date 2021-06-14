@@ -1,5 +1,12 @@
 package com.learn.designpattern.singleton;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 /**
  * @Description: 枚举实现单例模式
  * @Author: chenfuyuan
@@ -41,11 +48,25 @@ public enum EnumSingleton {
     }
 
 
-    public static void main(String[] args) {
-        EnumSingleton instance_1 = EnumSingleton.getInstance();
+    public static void main(String[] args) throws Exception {
+        EnumSingleton instance_1 = null;
         EnumSingleton instance_2 = EnumSingleton.getInstance();
-        System.out.println(instance_1);
-        System.out.println(instance_2);
+        instance_2.setField(new Object());
+        File file;
+        FileOutputStream fos = new FileOutputStream("EnumSingleton.obj");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(instance_2);
+        oos.flush();
+        oos.close();
+
+        FileInputStream fis = new FileInputStream("EnumSingleton.obj");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        instance_1 = (EnumSingleton) ois.readObject();
+        ois.close();
+
+        System.out.println(instance_1.getField());
+        System.out.println(instance_2.getField());
+        System.out.println(instance_1.getField() == instance_2.getField());
     }
 
 }
