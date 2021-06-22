@@ -11,6 +11,7 @@
     <properties>
         <sl4j-api.version>1.7.20</sl4j-api.version>
         <logback.version>1.2.3</logback.version>
+        <upTool.version>1.0.0</upTool.version>
     </properties>
 
     <dependencies>
@@ -56,6 +57,12 @@
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.upTool</groupId>
+            <artifactId>upTool-core</artifactId>
+            <version>${upTool.version}</version>
         </dependency>
     </dependencies>
 

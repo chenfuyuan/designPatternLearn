@@ -1,10 +1,7 @@
 package com.learn.designpattern.singleton;
 
-import sun.plugin2.message.Serializer;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @Description: 懒汉式
