@@ -37,6 +37,11 @@ public class OrderServiceStaticProxy implements OrderService {
         return 0;
     }
 
+    @Override
+    public void test() {
+
+    }
+
     private void after() {
         System.out.println("Proxy after method.");
     }

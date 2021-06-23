@@ -2,6 +2,7 @@ package com.learn.designpattern.proxy.service.impl;
 
 import com.learn.designpattern.proxy.bean.DynamicDataSourceEntry;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -9,12 +10,13 @@ import java.lang.reflect.Proxy;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 /**
  * @Description: 动态代理
  * @Author: chenfuyuan
  * @Date: 2021/6/23 20:01
  */
-public class OrderServiceDynamicProxy implements InvocationHandler {
+public class OrderServiceDynamicProxy implements InvocationHandler, Serializable {
 
     private SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
 

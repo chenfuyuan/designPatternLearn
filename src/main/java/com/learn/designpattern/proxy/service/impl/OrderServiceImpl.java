@@ -23,4 +23,9 @@ public class OrderServiceImpl implements OrderService {
         orderDao.insert(order);
         return 1;
     }
+
+    @Override
+    public void test() {
+
+    }
 }
